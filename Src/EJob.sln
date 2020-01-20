@@ -3,15 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29509.3
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Src", "Src", "{BF52DD07-D285-4EFC-BEDF-C7C593CF1973}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EJob.Domain", "EJob.Domain\EJob.Domain.csproj", "{6D285D20-01DB-4D5F-856C-65E93F23C235}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EJob.Domain", "Src\EJob.Domain\EJob.Domain.csproj", "{6D285D20-01DB-4D5F-856C-65E93F23C235}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EJob.Application", "EJob.Application\EJob.Application.csproj", "{F18C3036-492C-4805-B214-90751B850906}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EJob.Application", "Src\EJob.Application\EJob.Application.csproj", "{F18C3036-492C-4805-B214-90751B850906}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EJob.Infrastructure", "EJob.Infrastructure\EJob.Infrastructure.csproj", "{74CC5667-4195-45CE-9DB0-7FC267767A7B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EJob.Infrastructure", "Src\EJob.Infrastructure\EJob.Infrastructure.csproj", "{74CC5667-4195-45CE-9DB0-7FC267767A7B}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EJob.WebAPI", "Src\EJob.WebAPI\EJob.WebAPI.csproj", "{D7623848-4A24-4F4C-8A15-66F4E52CA3C0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EJob.WebAPI", "EJob.WebAPI\EJob.WebAPI.csproj", "{D7623848-4A24-4F4C-8A15-66F4E52CA3C0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -38,12 +36,6 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{6D285D20-01DB-4D5F-856C-65E93F23C235} = {BF52DD07-D285-4EFC-BEDF-C7C593CF1973}
-		{F18C3036-492C-4805-B214-90751B850906} = {BF52DD07-D285-4EFC-BEDF-C7C593CF1973}
-		{74CC5667-4195-45CE-9DB0-7FC267767A7B} = {BF52DD07-D285-4EFC-BEDF-C7C593CF1973}
-		{D7623848-4A24-4F4C-8A15-66F4E52CA3C0} = {BF52DD07-D285-4EFC-BEDF-C7C593CF1973}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DFCE2939-EE1A-4CF0-88F9-C1B6159919E8}
