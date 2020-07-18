@@ -3,6 +3,8 @@ using EJob.Domain.Interfaces;
 using EJob.Domain.RepositoryContacts;
 using Microsoft.EntityFrameworkCore;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace EJob.Infrastructure.Repositories
@@ -32,13 +34,24 @@ namespace EJob.Infrastructure.Repositories
         {
             var job = await _context
                 .Jobs.Include(x => x.Spools)
-                .FirstOrDefaultAsync(j => j.Id == j.Id);
+                .Where(j => j.Id == jobId).SingleOrDefaultAsync();
             return job;
         }
 
         public Job Update(Job job)
         {
             return _context.Update(job).Entity;
+        }
+
+        public async Task<IEnumerable<Job>> GetAllAsync()
+        {
+            return await _context.Jobs.ToListAsync();
+        }
+
+        public async Task<Job> DeleteAsync(int id)
+        {
+            var jobToDelete = await GetAsync(id);
+            return _context.Jobs.Remove(jobToDelete).Entity;
         }
     }
 }

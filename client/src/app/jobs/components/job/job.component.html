@@ -1,0 +1,43 @@
+<div style="width: 400px;margin: auto;">
+    <form [formGroup]="jobForm" (submit)="OnSubmit()" class="needs-validation">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="name" class="form-control"
+                [ngClass]="{'is-invalid':!name.valid&&name.touched,'is-valid':name.valid}"
+                formControlName="name" required>
+            <small class="form-text text-muted">A name that describes the printing job.</small>
+            <div class="invalid-feedback">This field is required</div>
+            <div class="valid-feedback">Looks great!</div>
+        </div>
+        <div class="row">
+            <div class="form-group col-sm-6">
+                <label for="name">Customers Count</label>
+                <input type="number" class="form-control"
+                    [ngClass]="{'is-invalid':!customerCount.valid&&customerCount.touched,'is-valid':customerCount.valid}"
+                    formControlName="customerCount" required>
+                <small class="form-text text-muted">A name that describes the printing job.</small>
+                <div class="invalid-feedback">This field is required</div>
+                <div class="valid-feedback">Looks great!</div>
+            </div>
+            <div class="form-group col-sm-6">
+                <label for="name">Pages Count</label>
+                <input type="number" class="form-control"
+                    [ngClass]="{'is-invalid':!pageCount.valid&&pageCount.touched,'is-valid':pageCount.valid}"
+                    formControlName="pageCount" required>
+                <small class="form-text text-muted">A name that describes the printing job.</small>
+                <div class="invalid-feedback">This field is required</div>
+                <div class="valid-feedback">Looks great!</div>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Add</button>
+    </form>
+
+    <form [formGroup]="uploadForm" (submit)="onUpload()">
+        <div class="form-group col-sm-6">
+            <label for="name">Upload a file</label>
+            <input type="file" class="form-control"
+                formControlName="file" (change)="handleFileInput($event.target.files)">
+        </div>
+        <button type="submit" class="btn btn-primary">Upload</button>
+    </form>
+</div>

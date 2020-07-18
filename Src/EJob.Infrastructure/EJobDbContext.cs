@@ -1,10 +1,11 @@
 ﻿using EJob.Domain.Entities;
 using EJob.Domain.Interfaces;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace EJob.Infrastructure
 {
-    public class EJobDbContext : DbContext, IUnitOfWork
+    public class EJobDbContext : IdentityDbContext, IUnitOfWork
     {
         public EJobDbContext(DbContextOptions<EJobDbContext> options)
             :base(options)
